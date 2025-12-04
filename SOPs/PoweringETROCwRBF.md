@@ -62,7 +62,7 @@ As you go please check the documenting section to correctly document all the ste
 
 0. Place the Probe on the test point of interest with the associated ground like in Figure 2
 1. Run test module tamalero (`| tee output.txt` for bash users to save the output to upload to a file)
-    - `python test_module.py --test_chip --external_vref --moduleid 123 --verbose --power_mode high | tee output.txt` (if external vref otherwise drop the `--external_vref`)
+    - `python -u test_module.py --test_chip --external_vref --moduleid 123 --verbose --power_mode high | tee output.txt` (if external vref otherwise drop the `--external_vref`)
     - Make sure you save the full tamalero output to a file and save all of them
 2. Watch for triggers on the scope
 3. When the script begins the autothreshold scan, document if it is stuck or not (and with the corresponding scope file if you are saving them out)
