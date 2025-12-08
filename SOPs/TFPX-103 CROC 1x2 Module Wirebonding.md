@@ -1,4 +1,4 @@
-# TFPX-103 Module Wirebonding
+# TFPX-103 CROC 1x2 Module Wirebonding
 
 `Introduction Placeholder`
 
