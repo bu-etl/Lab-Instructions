@@ -85,7 +85,7 @@ To do the trim bit wires, you must first figure out what the correct configurati
 
 |Purdue DB Entry|
 |-|
-|![Purdue DB](./PurdueDB.png)|
+|![Purdue DB](./images/PurdueDB.png)|
 
 The left image at the bottom will be the pads you are looking for on the left side of the module, and the right image are the pads you are looking for on the right side of the module. Make sure that you refer to the correct image when bonding these wires. Once you find the pads, bond vertical wires where the image has a red line, skipping the pads where the image has a gray line.
 
@@ -93,7 +93,7 @@ For the locations of the pull test and bias wires, refer to this image where the
 
 |Pull test and bias wires|
 |-|
-|![Pull test/bias](./pulltest_bias.png)|
+|![Pull test/bias](./images/pulltest_bias.png)|
 
 ### Step 9: Inspect and image wirebonds
 

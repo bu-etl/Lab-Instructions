@@ -21,31 +21,31 @@ Place the module carrier on which the glued module is screwed in onto the desire
 
 |Step 1|
 |-|
-|![Step 1](./spacer_step1.jpg)|
+|![Step 1](./images/spacer_step1.jpg)|
 
 2. Then, place the stencil over the spacer, ensuring the orientation of the stencil is correct (horizontal line on top and larger vertical line on right). Put a mixing nozzle on the glue gun and deposit a line of glue below only the spacer you wish to glue. Do not put glue below empty holes. Then, slowly spread the glue upwards with the glue spreader.
 
 |Step 2|
 |-|
-|![Step 2](./spacer_step2.jpg)|
+|![Step 2](./images/spacer_step2.jpg)|
 
 3. Lift the stencil off the spacer, being careful that the spacer is not lifted with the stencil. If it is, carefully place it back in the desired location. Then, place the other brass fixture over the spacer, ensuring the orientation is correct (holes should be oriented the same as the stencil).
 
 |Step 3|
 |-|
-|![Step 3](./spacer_step3.jpg)|
+|![Step 3](./images/spacer_step3.jpg)|
 
 4. Pick up the brass sandwich and flip it about its long edge.
 
 |Step 4|
 |-|
-|![Step 4](./spacer_step4.jpg)|
+|![Step 4](./images/spacer_step4.jpg)|
 
 5. Remove the top brass piece, being careful that the spacer is not lifted with it. If the spacer is lifted, carefully place it back where it was.
 
 |Step 5|
 |-|
-|![Step 5](./spacer_step5.jpg)|
+|![Step 5](./images/spacer_step5.jpg)|
 
 ### Step 2: Run installation script
 

@@ -29,8 +29,8 @@ The picture of the SRA can be done with either a microscope or the gantry camera
 
 ||Chip 12|Chip 13|
 |-|-|-|
-|ROC Side|![ROC12](./ROC12.png)|![ROC13](./ROC13.png)|
-|Sensor Side|![SENSOR12](./SENSOR12.png)|![SENSOR13](./SENSOR13.png)|
+|ROC Side|![ROC12](./images/ROC12.png)|![ROC13](./images/ROC13.png)|
+|Sensor Side|![SENSOR12](./images/SENSOR12.png)|![SENSOR13](./images/SENSOR13.png)|
 
 Here is a method for taking these that minimizes handling:
 - Put on ESD safe nitrile gloves and any other necessary protective apparel
