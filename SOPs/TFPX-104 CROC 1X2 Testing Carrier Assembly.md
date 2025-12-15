@@ -11,4 +11,6 @@
     - Module cover
     - Data adapter board
     - Power adapter board
-    - 
+    - FIXME: number and size of various screws (cover screws, module screws, adapter board screws)
+    - FIXME: number and size of adapter board spacers
+

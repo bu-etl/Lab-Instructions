@@ -103,11 +103,21 @@ For the locations of the pull test and bias wires, refer to this image where the
 
 Once you are ready to remove the module from the wirebonder, press "Clamp" to turn off the vacuum (this should also unlock the window), and pick up the module carrier. Take it over to a microscope and inspect the wirebonds, making sure there are wires everywhere there should be. Take and save pictures of the wires for both chips, along with the trim bit, bias, and pull test wires. 
 
-**Caleb: Add reference image of a good set of wirebonds for comparison**
+|Left Chip Wires, Left Chip Trim Bits, & Pull Test Wires|Right Chip Wires and Right Trim Bits|Bias Wires|
+|-|-|-|
+|![leftchip](./images/left_wires_trimbits_pulltest.png)|![rightchip](./images/right_wires_trimbits.png)|![biaswires](./images/biaswires.png)|
 
 ### Step 10: Update Purdue DB
 
-Navigate in the [Purdue DB](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/login.php?) to the module you are currently assembling and change its status from "Glued" to "Wirebonded."
+Log into the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php)) and login. Here's what to do from there:
+
+1. Click the "Inspect part (read/write)" button
+2. Type in the serial number of the module you're assembling into the "Serial #" field (e.g. RH0136)
+3. Click the search button (pressing enter won't work)
+4. Click the "Edit" button on the left side of the module's entry
+5. Click the "Status" dropdown and change it to "Wirebonded"
+6. Click the "Update" button
+
 
 ### Next steps
 

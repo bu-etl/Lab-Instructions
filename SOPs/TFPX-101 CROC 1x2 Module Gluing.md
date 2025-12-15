@@ -172,11 +172,12 @@ Log into the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpi
 3. Click the search button (pressing enter won't work)
 4. Click the "Edit" button on the left side of the module's entry
 5. Click the "Status" dropdown and change it to "Glued"
-6. Scroll down to the "Add data" section
-7. Next to the "Add data" button, click "Browse..." and select the assembly log file
-8. Type "Assembly log file:" in the description field
-9. Click the "Add data" button
-10. Repeat steps 6-9, but with the survey log file (type "Survey log file:" in description field)
+6. Click the "Update" button
+7. Scroll down to the "Add data" section
+8. Next to the "Add data" button, click "Browse..." and select the assembly log file
+9. Type "Assembly log file:" in the description field
+10. Click the "Add data" button
+11. Repeat steps 7-10, but with the survey log file (type "Survey log file:" in description field)
 
 ### Next steps
 
