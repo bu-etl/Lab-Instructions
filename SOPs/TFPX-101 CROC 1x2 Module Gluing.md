@@ -43,60 +43,111 @@ The picture of the SRA can be done with either a microscope or the gantry camera
 |Sensor Side|![SENSOR12](./images/SENSOR12.png)|![SENSOR13](./images/SENSOR13.png)|
 
 Here is a method for taking these that minimizes handling:
-- Put on nitrile gloves in addition to required cleanroom apparel
-- Image whatever side faces up in the gelpak **Caleb: should be more proscriptive, "Image the sensor side of the SRA"**
-- Put gelpak on the gelpak vacuum release tooling and turn on the vacuum line  **Caleb: How does one turn on the vacuum line?**
-- Pick up the SRA with a vacuum pen and place it in your gloved hand palm up
-- Flip the SRA with the rubber lip of the vacuum pen
-- Place the SRA back in the gelpak with the vacuum pen and turn off the vacuum line
-- Image other side
+1. Put on nitrile gloves in addition to required cleanroom apparel
+2. Image whatever side faces up in the gelpak **Caleb: should be more proscriptive, "Image the sensor side of the SRA"**
+3. Put gelpak on the gelpak vacuum release tooling
+4. Open gScript Interpreter in nonvirtual mode
+5. Turn on the vacuum line (gScript command: `setvac gelpak_release 1`)
+6. Pick up the SRA with a vacuum pen and place it in your gloved hand palm up
+7. Flip the SRA with the rubber lip of the vacuum pen
+8. Place the SRA back in the gelpak with the vacuum pen
+9. Turn off the vacuum line (gScript command: `setvac gelpak_release 0`)
+10. Image other side
 
 **Caleb: We should confirm that we are required to image both sides of the SRA. I feel like we would spot 95% of issues by imaging just the sensor side, and this flipping procedure seems to introduce extra handling that could be avoided.**
 
 
-### Step 2: Weigh parts
+### Step 2: Weigh and stage parts
 
-To know how much glue was used to adhere the module together, we weigh the components before the assembly and the module after assembly, and subtract the difference. Using the vacuum pen, safely transfer the components to the high precision scale and record their masses one at a time.
+To know how much glue was used to adhere the module together, we weigh the components before the assembly and the module after assembly, and subtract the difference. Here is how to do this step safely:
 
-**Caleb: Be more specific. What exactly are the steps. Do you need to press any buttons on the scale? Do you wait for the reading to stabilize, for how long? To what precision do you record the measurements? Which components are we measuring?**
+1. Put on nitrile gloves in addition to required cleanroom apparel
+2. Remove everything from the high precision mass scale
+3. Close the sliding glass doors of the scale
+4. Press the "UNITS" button on the scale until the unit on the right side of the display is milligrams (mg)
+5. Make sure the scale's idle reading is zero (press "->0<- DELETE" or "->T<- TARE" button if nonzero)
+6. Open one of the scale's sliding glass doors
+7. Place SRA gelpak on the gelpak vacuum release tooling
+8. Open gScript Interpreter in nonvirtual mode
+9. Turn on the gelpak tooling vacuum line (gScript command: `setvac gelpak_release 1`)
+10. Pick up SRA with vacuum pen
+11. Carry SRA over to the high precision scale using vacuum pen, having your gloved hand hovering under the SRA in case the suction fails
+12. Gently place the SRA in the center of the scale's metal plate through the open door
+13. Close the sliding glass door
+14. Wait for the scale's stability indicator to light up on the left side of the display (mirrored right triangles converging at a single point)
+15. Record the mass to the precision to as many decimals as it shows on the display
+16. Open the sliding glass door
+17. Pick up SRA with vacuum pen
+18. Carry SRA over to the gantry 1x2 assembly tooling using vacuum pen, having your gloved hand hovering under the SRA in case the suction fails
+19. Gently place the SRA on the ROC launch chuck (sensor side up, wirebond pads on the right)
+20. Using the vacuum pen, gently push the SRA into the corner of the two strips of kapton tape
+21. Turn off the gelpak tooling vacuum line (gScript command: `setvac gelpak_release 0`)
+22. Remove HDI from its bag using vacuum pen
+23. Carry HDI over to the scale using the vacuum pen, having your gloved hand hovering under the HDI in case the suction fails
+24. Gently place the HDI in the center of the scale's metal plate through the open door
+25. Close the sliding glass door
+26. Wait for the scale's stability indicator to light up on the left side of the display (mirrored right triangles converging at a single point)
+27. Record the mass to the precision to as many decimals as it shows on the display
+28. Open the sliding glass door
+29. Pick up the HDI with the vacuum pen
+30. Carry HDI over to the gantry 1x2 assembly tooling using the vacuum pen, having your gloved hand hovering under the HDI in case the suction fails
+31. Gently place the HDI on the HDI launch chuck (component side up, two screw holes on right)
+32. If the HDI is noticeably warped, gently bend it so it lays flat on the chuck
+33. Align the two screw holes in the HDI with the two screw holes in the chuck
+34. Add the masses of the HDI and SRA together
 
-### Step 3: Stage parts
+Below is an image of what the components should look like after they are staged:
 
-Assuming the 1x2 module assembly tooling is already installed and calibrated, stage the SRA on the sensor launch chuck and the HDI on the HDI launch chuck with a vacuum pen. It should be connector side up for the HDI and sensor side up for the SRA. For the HDI, align the two screw holes in the HDI with the two screw holes on the right side of the chuck. For the SRA, we gently push it into the corner of the strips of kapton tape that we have placed on the chuck to help us align the center consistently. The wirebond pads on the ROC should be on the left side of the chuck. Below is a picture of the correct orientation for staging.
+INSERT IMAGE
 
-**Caleb: How can I know if the tooling is installed and calibrated? Are there any quick checks that can confirm this? Mention that if the HDI is noticibly warped, you can try to gently bend it so it lays flat on the chuck.**
-
-INSERT PICTURE HERE
-
-### Step 4: Run assembly script
+### Step 3: Run assembly script
 
 We are now ready to run our gantry script. Open the gScript Interpreter, select to run in nonvirtual mode, click load script, and navigate to the assembly script. The current path for the assembly script is: 
 
 `./gantry-config-bu/Scripts/TFPXModules/Pre-Production Scripts/Assemble_1x2_sensor.gscript`
 
-Then click run script and follow the instructions in the pop-ups.
+Then click run script and follow the instructions in the pop-ups. Once you arrive at the gluing step, follow these instructions (see below for images):
 
-INSERT PICTURE OF FIDUCIALS HERE FOR REFERENCE (or add reference images to the script)
+1. Pick up the HDI weight tool
+2. Flip it over about its short edge 
+3. Place it down on the weight tool 0 chuck (HDI side up, HDI screw holes on right)
+4. Make sure the weight tool is pushed down the pegs all the way and the hose is fed to the right
+5. Place the glue stencil over the HDI (align the separated strip of holes in the stencil with the separated strip on the HDI)
+6. Make sure the stencil is flush with the HDI
+7. Gather glue materials (glue gun, mixing nozzle, glue spreader, paper towel)
+8. Place a paper towel on gantry table, this is where you will place things with glue on them so you don't make a mess
+9. Take off the cap on the glue gun and put on a mixing nozzle
+10. Deposit a line of glue a below the lowest row of holes, but above the peg holding the stencil in place
+11. Place the glue gun down with the nozzle over the paper towel
+12. Pick up the glue spreader with your dominant hand
+13. Use your pointer finger and thumb to apply pressure on the stencil above the top peg and below the bottom peg, respectively
+14. Position the spreader below the line of glue
+15. In one motion, slowly drag the spreader towards the top peg stopping after you have passed the top row of holes
+16. Still applying pressure on the stencil, lift the spreader off the stencil and place it on the paper towel
+17. Grab the top and bottom edges of the stencil and lift it straight off the HDI
+18. Place stencil on paper towel
 
-Once you arrive at the gluing step, place the HDI flipper tool HDI side up on the weight tool chuck. Ensure that the hose is fed perpendicularly to the right. Here are a sequence of pictures of the gluing process, which are explained below.
-
-||||
+|Step 3/4|Step 5/6|Step 10|
 |-|-|-|
 |HDI PICTURE|STENCIL OVER HDI|GLUE LINE ON STENCIL|
 
-Place the stencil over the HDI, making sure that the orientation is correct. The quickest way to check this is by making sure the thin strip on the side of the HDI lines up with the separated strip of holes on the stencil. Once the stencil is placed correctly, you can now put a mixing nozzle on the glue gun and deposit a line of glue at the bottom of the stencil. Then, slowly spread the glue upwards with the glue spreader until the last row of holes is passed. It is helpful to use your idle hand to hold the stencil down near the two holes to make sure the stencil doesn't lift off the HDI prematurely, especially when you lift the spreader off the stencil. Once you are done spreading the glue and the spreader has been lifted away from the stencil, grab the top and bottom of the stencil and lift it straight up off the HDI. The script will then do a survey of the glue pattern, which you should look at to ensure there is glue in all the spots there should be.
+At this point, you can continue with the script, which will then do a survey of the glue pattern, which you should look at to ensure there is glue in all the spots there should be.
 
-**Caleb: Add a reference image of the glue pattern for comparison**
+|Glue Survey Example|
+|-|
+|![glue survey](./images/glue_survey.png)|
 
 You can now continue through the script until you have completed the final step of measuring the fiducials on the placed HDI. Lastly, save the assembly log file and glue survey image, both of which are found in the logs directory (`./gantry-config-bu/Logs/`).
 
-### Step 5: Cure module
+### Step 4: Cure module
 
-After the assembly script, you must let the glue cure for at least 8 hours. Make sure to leave the vacuum lines of both the assembly chuck and HDI flipper tool on. Also direct the hose of the weight tool upwards as seen in the picture below. Lastly, put a note next to the curing module saying "DO NOT TOUCH, GLUE CURING" or something along those lines so no one unknowingly interferes with this process.
+After the assembly script, you must let the glue cure for at least 8 hours. Make sure to leave the vacuum lines of both the assembly chuck and HDI weight tool on. Also direct the hose of the weight tool upwards as seen in the picture below. Lastly, put a note next to the curing module saying "DO NOT TOUCH, GLUE CURING" or something along those lines so no one unknowingly interferes with this process.
 
 INSERT PICTURE
 
-### Step 6: Run survey script
+You should also take this time to clean the materials that have glue on them. You can take off the mixing nozzle and dispose of it. Make sure to wipe the end of the glue gun before putting the cap back on. Take the dirty stencil and spreader to the sink and wipe it under running water until the glue is cleaned off, then dry them off. 
+
+### Step 5: Run survey script
 
 After enough time as passed, load the survey script, which will measure the relative alignment of the two parts. That script is currently in the following location:
 
@@ -104,15 +155,28 @@ After enough time as passed, load the survey script, which will measure the rela
 
 Run the script and follow the prompts that pop-up. Select the precise option for measuring the fiducials. After the script completes, save the survey log file, which is found in the logs directory (`./gantry-config-bu/Logs/`).
 
-### Step 7: Weigh module
+### Step 6: Weigh module
 
-You can now pick the module up with a vacuum pen and weigh the module with the high precision scale. Record the mass and subtract off the sum of the earlier measurements of the individual components. The result will be the weight of the total glue applied.
+You can now pick the module up with a vacuum pen and weigh the module with the high precision scale following a similar process as the earlier weighing. Record the mass and subtract off the sum of the earlier measurements of the individual components.
 
-### Step 8: Update the Purdue DB
+$m_{\text{glue}}=m_{\text{glued module}}-(m_{\text{SRA}}+m_{\text{HDI}})$
 
-Log into the Purdue DB and navigate to the entry for the module you are currently assembling. Change the status to "Glued" and upload the assembly and survey log files to the notes section.
+Record this value.
 
-**Caleb: A bit more detail here since the Purdue database is not the most intuitive to use. At least mention which button to click from the home screen "Inspect part (read/write)".**
+### Step 7: Update the Purdue DB
+
+Log into the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php)) and login. Here's what to do from there:
+
+1. Click the "Inspect part (read/write)" button
+2. Type in the serial number of the module you're assembling into the "Serial #" field (e.g. RH0136)
+3. Click the search button (pressing enter won't work)
+4. Click the "Edit" button on the left side of the module's entry
+5. Click the "Status" dropdown and change it to "Glued"
+6. Scroll down to the "Add data" section
+7. Next to the "Add data" button, click "Browse..." and select the assembly log file
+8. Type "Assembly log file:" in the description field
+9. Click the "Add data" button
+10. Repeat steps 6-9, but with the survey log file (type "Survey log file:" in description field)
 
 ### Next steps
 
