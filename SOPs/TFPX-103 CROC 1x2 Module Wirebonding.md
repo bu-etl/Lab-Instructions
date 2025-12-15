@@ -4,16 +4,20 @@
 
 ## Required Materials
 
-- Glued module (with spacer)
+- Glued module (with spacer) screwed to assembly carrier
+- TFPX 1x2 Module Wirebonding Plate
 - Equipment
-    - Wirebonder
+    - Hesse BJ855 Automatic Wirebonder
     - Microscope
+    - USB Thumb Drive
 
 ## Procedure
 
+**Caleb: Possibly add a "Step 0" with some preflight checks for the bonder. E.g. check the bond head and wire in the E-box and perform a small number of manual bonds on a test coupon** 
+
 ### Step 1: Stage module
 
-Slide the module carrier on which the glued module is screwed in into the wirebonding fixture. Unlock the wirebonder window by turning the "A-Mode" key, and place the fixture onto the vacuum chuck. Orient the fixture so the wirebond pad side of the module is the side closest to you. Push the fixture corner into the sets of pegs to make alignment easier. Slide the wirebonder window back up and press the "CLAMP" button on the keypad to turn the vacuum on. You must be logged in to turn on the clamp. You can check that the clamp is on by looking at the clamp status icon at the top of the screen. Below is a picture of what the icon should look like.
+Slide the module carrier on which the glued module is screwed in into the TFPX 1x2 Module Wirebonding Plate. Unlock the wirebonder window by turning the "A-Mode" key, and place the fixture onto the vacuum chuck. Orient the fixture so the wirebond pad side of the module is the side closest to you. Push the fixture corner into the sets of pegs to make alignment easier. Slide the wirebonder window back up and press the "CLAMP" button on the keypad to turn the vacuum on. You must be logged in to turn on the clamp. You can check that the clamp is on by looking at the clamp status icon at the top of the screen. Below is a picture of what the icon should look like.
 
 |Clamp off|Clamp on|
 |-|-|
@@ -41,17 +45,17 @@ Click the CROC_1x2_Sensor_Module object in the "Aufnahme" drop down and then cli
 |-|
 |INSERT PICTURE CIRCLING START ALIGNMENT BUTTON|
 
-The wirebonder will then quickly align the two parts, and will calculate where the bond feet should be. If the yellow lines representing the wires are not visible, enable this button on the right camera panel:
+The wirebonder will then quickly align the two parts, and will calculate where the bond feet should be. If the yellow lines representing the wires are not visible, enable this using a button on the right side of the camera panel:
 
 |Wire visibility button(s)|
 |-|
 |INSERT PICTURE CIRCLING WIRE VISIBILITY BUTTON|
 
-If one of the two sets of bond feet are systematically malaligned (e.g. consistently too far to the left side of the bond pads), you can retry the alignment for that part by clicking that object in the drop down and clicking the start alignment button. Once most of the bond feet look good and centered on the pads, you can now adjust any single bond feet that are still malaligned. This can be done by navigating to the "Optimization" tab, entering correction mode by clicking the "Correction" button on the left panel, and dragging the bond feet in the camera window to the desired location. Double check all bond feet on both components are centered well enough. Exit correction mode by clicking the "Correction" button again. 
+If one of the two sets of bond feet are systematically misaligned (e.g. consistently too far to the left side of the bond pads), you can retry the alignment for that part by clicking that object in the drop down and clicking the start alignment button. Once most of the bond feet look good and centered on the pads, you can now adjust any single bond feet that are still not properly centered on their respective bond pads. This can be done by navigating to the "Optimization" tab, entering correction mode by clicking the "Correction" button on the left panel, and dragging the bond feet in the camera window to the desired location. Double check all bond feet on both components are centered well enough. Exit correction mode by clicking the "Correction" button again. 
 
 ### Step 5: Bond HDI/SRA wires
 
-Still in the "Optimization tab," click the HDI object in the drop down and click the "Detect touch down" on the left panel. It should now press down on the first bond pad on both the HDI and SRA to calibrate the height. After it's done, it should be hovering over wire 9 (which is first in the bond order). Note the wire numbers do not correspond to the actual bond order. Make sure the deformation graph is cleared out, which can be done by navigating to the graph tab on the left panel of the camera and clicking the "Clear all process curves" button:
+Still in the "Optimization tab," click the HDI object in the drop down and click the "Detect touch down" on the left panel. It should now touch down on the first bond pad on both the HDI and SRA to calibrate the height. After it's done, it should be hovering over wire 9 (which is first in the bond order). Note the wire numbers do not correspond to the actual bond order. Make sure the deformation graph is cleared out, which can be done by navigating to the graph tab on the left panel of the camera and clicking the "Clear all process curves" button:
 
 |Deformation data tab|
 |-|
@@ -81,7 +85,7 @@ Apart from the main wirebonds between the HDI and SRA, there are three sets of w
 
 To define a wire in manual bonding mode, click the "Define wires..." button and input the correct dimensions, orientation, quantity, and offset for the set of wires you wish to place. Exit the window by clicking "Finish." Define the location of the first bond foot by clicking the "Define position" button and clicking where you want the first bond foot. If it looks like the bond feet are correctly located, you may click "Detect TD" followed by clicking "Bond all" to bond the wires (or click "Single wire" repeatedly if you wish to do them one at a time).
 
-To do the trim bit wires, you must first figure out what the correct configuration of wires is (this changes from module to module). This information can be found on the Purdue DB entry for the module you are assembling. See this example.
+To do the trim bit wires, you must first figure out what the correct configuration of wires is (this changes from module to module). This information can be found on the [Purdue DB](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/login.php?) entry for the module you are assembling. See this example.
 
 |Purdue DB Entry|
 |-|
@@ -99,9 +103,11 @@ For the locations of the pull test and bias wires, refer to this image where the
 
 Once you are ready to remove the module from the wirebonder, press "Clamp" to turn off the vacuum (this should also unlock the window), and pick up the module carrier. Take it over to a microscope and inspect the wirebonds, making sure there are wires everywhere there should be. Take and save pictures of the wires for both chips, along with the trim bit, bias, and pull test wires. 
 
+**Caleb: Add reference image of a good set of wirebonds for comparison**
+
 ### Step 10: Update Purdue DB
 
-Navigate to the module you are currently assembling and change its status from "Glued" to "Wirebonded."
+Navigate in the [Purdue DB](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/login.php?) to the module you are currently assembling and change its status from "Glued" to "Wirebonded."
 
 ### Next steps
 

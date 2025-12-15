@@ -2,6 +2,16 @@
 
 `Introduction Placeholder`
 
+<summary>General Comments</summary>
+
+  - [ ] Add pictures of all required materials
+
+</details>
+
+## References
+
+  - Purdue spacer installation SOP: https://github.com/bu-etl/Lab-Instructions/blob/main/SOPs/TFPX-102-materials/TFPX%20Spacer%20SOP.pdf
+
 ## Required Materials
 
 - Glued module
@@ -48,6 +58,8 @@ Place the module carrier on which the glued module is screwed in onto the desire
 |![Step 5](./images/spacer_step5.jpg)|
 
 ### Step 2: Run installation script
+
+**Caleb: What calibrations are needed to run the script? And how can they be checked? Reference Purdue SOP linked above which has calibration instructions.**
 
 You can now load the spacer installation script into the gScript Interpreter, which can be found at:
 
