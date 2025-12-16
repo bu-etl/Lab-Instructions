@@ -1,33 +1,34 @@
 # TFPX-202 Test 1x2 CROC Module
 
-`Introduction Placeholder`
+This SOP describes how to to test 1x2 CROC Modules using the TFPX test stand in the lab. Ensure that the module is never cooled to a temperature lower than the dew point of the surrounding air. If that were to happen, condensation would accumulate on the module, which could damage it. Always monitor the humidity and temperature of the coldbox and module anytime the chiller is on or the module is cooled.
 
 ## Required Materials
 
-  - 1x2 CROC Module
-  - 1x2 Probe Card
-  - ADC Board
-  - Single Module "UIC" Coldbox
-  - Dry Air
-  - Julabo Recirculating Chiller
-  - Test Stand PC
+- 1x2 CROC Module
+- 1x2 Probe Card
+- ADC Board
+- Single Module "UIC" Coldbox
+- Dry Air
+- Julabo Recirculating Chiller
+- Test Stand PC
 
 ## Procedure
 
 ### Step 1: Install Module in Cold Box
 
 1. Gather the module and probe card from the dry air cabinent in the clean room. Be carful not to damage the pins on the probe card as you carry it to the test stand.
-2. Ensure the valve connecting the coolant line to the coldbox is closed **[include picture of closed state]**. Begin cooling the coolant in the chiller. Turn the chiller on using the red button on the chiller. Using the dial, highlight temperature, and press the dial in to select. Using the dial, select 5.0 degrees Celsius as the setpoint. Press the dial to select. Select the power button in the top-right corner using the dial and press to start chilling the coolant **[need pictures of all these steps]**.
+2. Ensure the valve connecting the coolant line to the coldbox is closed.
+<img src="images/line_closed.png" width="300" alt="Foo diagram"> <br> Begin cooling the coolant in the chiller. Turn the chiller on using the red button on the chiller. <img src="images/chiller_power.png" width="300" alt="Foo diagram"> <br> Using the dial, highlight "Setpoint", and press the dial in to select. Using the dial, select 5.0 degrees Celsius as the setpoint. Press the dial to select. <br> <img src="images/chiller_menu.png" width="300" alt="Foo diagram"> <img src="images/setpoint_menu.png" width="300" alt="Foo diagram"> <br>  Select the power button in the top-right corner using the dial and press to start chilling the coolant. The chiller will go from "Standby" to "On". <br> <img src="images/chiller_on1.png" width="300" alt="Foo diagram"> <img src="images/chiller_on2.png" width="300" alt="Foo diagram">
 3. Ensure the Keysight E3633A low voltage supply, Keithley 2470 high voltage supply, FC7, and coldbox electronics box are powered off. There's no power button on the coldbox electronics box. Simply unplug it from the wall.
-4. Remove the coldbox lid. Place the module on top of the coldplate, ensuring the screw holes on the module carrier and coldplate align. Using a 5/64" hex key (AKA Allen wrench), secure the module to the coldplate using the screw **[what kind of screw?]**. Do NOT overtighten the screw; it is okay if the module carrier can rotate slightly.
+4. Remove the coldbox lid. Place the module on top of the coldplate, ensuring the screw holes on the module carrier and coldplate align. Using a 5/64" hex key (AKA Allen wrench), secure the module to the coldplate using the screw. Do NOT overtighten the screw; it is okay if the module carrier can rotate slightly. <br> <img src="images/coldplate_screw.png" width="300" alt="Foo diagram"> <img src="images/module_on_coldplate.png" width="300" alt="Foo diagram">
 5. Place the probe card on top of the module, ensuring the probe card pins align with the pin holes on the module cover. Be careful not to bend the pins. The probe card pins should drop into the module cover with zero resistance. You should not apply any force in placing the probe card on the module.
-6. Secure the probe card to the module cover using a 1/16" hex key and the screws **[what kind of screws?]**. Do not overtighten the screws.
-7. Connect the ADC board to the probe card **[picture needed]**.
-8. Connect the ADC board to the test stand PC using the micro-USB cable running through the side of the coldbox **[picture needed]**. There are 2 micro-USB ports on the ADC board. Connect the micro-USB cable to the port closest to you when the ports face left.
-9. Connect the module to the Keysight E3633A low voltage supply using the 4-pin molex connector **[picture of molex needed]**. The clip on the male end must face up. The connector only goes in this way.
-10. Connect the module to the Keithley 2470 high voltage supply using the MCX connector **[picture needed]**.
-11. Connect the module to the FC7 using the micro-HDMI connector **[picutre needed]**.
-12. Place the coldbox lid onto the coldbox. Secure the lid with a Phillips-head screwdriver and the 6 screws **[what kind of screws?]**. Tighten the screws in such an order as to spread out the force over the entire lid evenly as you secure it **[This doesn't make any sense, re-explain]**.
+6. Secure the probe card to the module cover using a 1/16" hex key and 2 M2.5 X 4 screws. Do not overtighten the screws. <br> <img src="images/probe_screws.png" width="300" alt="Foo diagram"> <img src="images/probe_on_module.png" width="300" alt="Foo diagram">
+7. Connect the ADC board to the probe card. <br> <img src="images/adc_on_probe.png" width="300" alt="Foo diagram">
+8. Connect the ADC board to the test stand PC using the micro-USB cable running through the side of the coldbox. There are 2 micro-USB ports on the ADC board. Connect the micro-USB cable to the port closest to you when the ports face left. <br> <img src="images/adc_connected.png" width="300" alt="Foo diagram">
+9. Connect the module to the Keysight E3633A low voltage supply using the 4-pin molex connector. The clip on the male end must face up. The connector only goes in this way.  <br> <img src="images/molex.png" width="300" alt="Foo diagram"> <img src="images/molex_connected.png" width="300" alt="Foo diagram"> <br>
+10. Connect the module to the Keithley 2470 high voltage supply using the MCX connector. <br> <img src="images/mcx.png" width="300" alt="Foo diagram"> <img src="images/mcx_connected.png" width="300" alt="Foo diagram"> <br>
+11. Connect the module to the FC7 using the micro-HDMI connector. <br> <img src="images/minihdmi.png" width="300" alt="Foo diagram"> <img src="images/minihdmi_connected.png" width="300" alt="Foo diagram"> <br>
+12. Place the coldbox lid onto the coldbox. Secure the lid with a Phillips-head screwdriver and the 6 screws. Tighten the screws in a crisscross pattern, moving to the screw farthest from the last one, to evenly distribute force across the lid. <br> <img src="images/lid_screws.png" width="300" alt="Foo diagram">
 
 ### Step 2: Cool and Dry the Coldbox
 
@@ -41,8 +42,8 @@
 
 3. When the login screen appears, enter your Panthera credentials and click "Login". ![alt text](images/login.png)
 4. The main page should appear momentarily. ![alt text](images/main.png) When the main page of the GUI appears, click   "Use" next to the FC7 name ("fc7.board"). Click "Connect all devices". Click the "Start Peltier Controller" in the Peltier Controller menu. This will turn on the thermometer in the peltier, which you can monitor via the number in the bottom-left corner. ![alt text](images/peltier_controller.png) Click "Use" in the Arduino Device menu. This will show the temperature, humidity, and dew point of the air in the coldbox. ![alt text](images/arduino.png)
-5. Turn on the dry air by tightening the brass handle connected to the dry air canister **[Need picture]**. You should see the pressure increase in the pressure gauge. 20 PSI/150 kPa of pressure is sufficient. If the pressure doesn't increase, ensure the main canister's release valve on top of the canister is open **[Need picture]**.
-6. You will also need to open the valve on the air flow meter attached to the side of the coldbox **[Picutre needed]**. 8 SCFH is a suitable flow rate while bringing the dew point of the coldbox below 5°C. You should reduce the flow rate to about 2.5 SCFH once the dew point is comfortably below 5°C to save dry air while also maintainig the proper humidity.
+5. Turn on the dry air by tightening the brass handle connected to the dry air canister.You should see the pressure increase in the pressure gauge. 20 PSI/150 kPa of pressure is sufficient. <br> <img src="images/brass_handle.png" width="300" alt="Foo diagram"> <img src="images/pressure.png" width="300" alt="Foo diagram"> <br> If the pressure doesn't increase, ensure the main canister's release valve on top of the canister is open. <br> <img src="images/main_valve.png" width="300" alt="Foo diagram">
+6. You will also need to open the valve on the air flow meter attached to the side of the coldbox. 8 SCFH is a suitable flow rate while bringing the dew point of the coldbox below 5°C. You should reduce the flow rate to about 2.5 SCFH once the dew point is comfortably below 5°C to save dry air while also maintainig the proper humidity. <br> <img src="images/8scfh.png" width="300" alt="Foo diagram"> <img src="images/2p5scfh.png" width="300" alt="Foo diagram"> <br>
 7. Wait for the dew point to reach comfortably below 5°C. Then you may open the coolant valve to begin chilling the module.
 8. Set the peliter target temperature to 5.00°C in the Peltier Controller menu on the main page of the GUI. Be sure to click "Set Temperature". Verfiy that "Current Set Temp" reads 5.0. ![alt text](images/set_temp.png) Click "Peltier Power On/Off" when the peltier temperature is below 10°C. You should see the temperature of the peltier rapidly drop to about 5°C. The temperature may oscillate about ±0.5°C around 5°C. This is normal.
 9. You are now ready to run tests.
@@ -55,7 +56,7 @@
 4. Select the test or series of tests you would like to run from the dropdown menu in the upper-right corner. The standard tests you should run to test a newly assembled module are the `TFPX_Assembly_QC` and `IVCurve`.
 5. Click "Next" top open the Run Control Page. ![alt text](images/run_control.png)
 6. Check "auto-save to Panthera".
-7. Click "Run" to start the test/series of tests. Be sure to monitor the temperature throughout. The module will warm up slightly **[how much is slightly?]** as the test progresses.
+7. Click "Run" to start the test/series of tests. Be sure to monitor the temperature throughout. The module will warm up as the test progresses.
 8. As the tests finish, you should see entries in the History table labled with the test name and a pass or fail. You can click on any failing entries to see more information about why the tests failed.
 9. Once all the tests in your series finish, you can browse through plots of the test results in the menu on the right side of the Run Control Page. Because you checked "auto-save to Panthera", the results will automatically upload when all tests in the series are completed.
 10. You may click "Finish" or simply close the Run Control Page once finished.
@@ -72,5 +73,5 @@
 8. Unscrew the coldbox lid and set it aside. Disconnect the micro-USB cable, MCX cable, micro-HDMI cable, and 4-pin molex connector from the module.
 9. Disconnect the ADC board from the probe card and set it aside.
 10. Using a 1/16" hex key, unscrew the probe card from the module. Set the screws aside and carefully lift off the probe card out of the module cover, being careful not to damage any of the pins. Set it aside.
-11. Using a 5/64" hex key, unscrew the module carrier from the cold plate. Set the module aside. Rethread the screw back into the coldplate for safe keeping.
+11. Using a 5/64" hex key, unscrew the module carrier from the cold plate. Set the module aside. Rethread the screw back into the coldplate for safe keeping. <br> <img src="images/rethread.png" width="300" alt="Foo diagram"> <br>
 12. Carefully bring the module and the probe card into the clean room and place them in the dry air cabinet.
