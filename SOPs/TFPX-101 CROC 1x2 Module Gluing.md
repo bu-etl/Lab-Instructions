@@ -39,8 +39,8 @@ The picture of the SRA can be done with either a microscope or the gantry camera
 
 ||Chip 12|Chip 13|
 |-|-|-|
-|ROC Side|![ROC12](./images/ROC12.png)|![ROC13](./images/ROC13.png)|
-|Sensor Side|![SENSOR12](./images/SENSOR12.png)|![SENSOR13](./images/SENSOR13.png)|
+|ROC Side|![ROC12](./TFPX-101-materials/images/ROC12.png)|![ROC13](./TFPX-101-materials/images/ROC13.png)|
+|Sensor Side|![SENSOR12](./TFPX-101-materials/images/SENSOR12.png)|![SENSOR13](./TFPX-101-materials/images/SENSOR13.png)|
 
 Here is a method for taking these that minimizes handling:
 1. Put on nitrile gloves in addition to required cleanroom apparel
@@ -135,7 +135,7 @@ At this point, you can continue with the script, which will then do a survey of 
 
 |Glue Survey Example|
 |-|
-|![glue survey](./images/glue_survey.png)|
+|![glue survey](./TFPX-101-materials/images/glue_survey.png)|
 
 You can now continue through the script until you have completed the final step of measuring the fiducials on the placed HDI. Lastly, save the assembly log file and glue survey image, both of which are found in the logs directory (`./gantry-config-bu/Logs/`).
 

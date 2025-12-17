@@ -89,7 +89,7 @@ To do the trim bit wires, you must first figure out what the correct configurati
 
 |Purdue DB Entry|
 |-|
-|![Purdue DB](./images/PurdueDB.png)|
+|![Purdue DB](./TFPX-103-materials/images/PurdueDB.png)|
 
 The left image at the bottom will be the pads you are looking for on the left side of the module, and the right image are the pads you are looking for on the right side of the module. Make sure that you refer to the correct image when bonding these wires. Once you find the pads, bond vertical wires where the image has a red line, skipping the pads where the image has a gray line.
 
@@ -97,7 +97,7 @@ For the locations of the pull test and bias wires, refer to this image where the
 
 |Pull test and bias wires|
 |-|
-|![Pull test/bias](./images/pulltest_bias.png)|
+|![Pull test/bias](./TFPX-103-materials/images/pulltest_bias.png)|
 
 ### Step 9: Inspect and image wirebonds
 
@@ -105,7 +105,7 @@ Once you are ready to remove the module from the wirebonder, press "Clamp" to tu
 
 |Left Chip Wires, Left Chip Trim Bits, & Pull Test Wires|Right Chip Wires and Right Trim Bits|Bias Wires|
 |-|-|-|
-|![leftchip](./images/left_wires_trimbits_pulltest.png)|![rightchip](./images/right_wires_trimbits.png)|![biaswires](./images/biaswires.png)|
+|![leftchip](./TFPX-103-materials/images/left_wires_trimbits_pulltest.png)|![rightchip](./TFPX-103-materials/images/right_wires_trimbits.png)|![biaswires](./TFPX-103-materials/images/biaswires.png)|
 
 ### Step 10: Update Purdue DB
 
