@@ -1,12 +1,6 @@
 # TFPX-102 Spacer Installation
 
-`Introduction Placeholder`
-
-<summary>General Comments</summary>
-
-  - [ ] Add pictures of all required materials
-
-</details>
+This SOP details how to install a spacer onto a glued 1x2 sensor module.
 
 ## References
 
@@ -28,6 +22,20 @@
 
 ## Procedure
 
+### Step 0: Calibrate gantry
+
+You should make sure that the relevant calibrations for this procedure have already been done. If you are unsure, you should ask an advisor or you can do a dry run of the script and see if the spacer gets placed where you expect it to. For a dry run, you should use a bare HDI in place of a glued module and you should not actually use any glue (hence 'dry') in step 2.
+
+In the event the calibrations need to be done or redone, you should follow the instructions in [this calibration SOP](./TFPX-102-materials/TFPX%20Spacer%20SOP.pdf) made by the team at Purdue (linked above as well). Particularly, you should make sure the SSCO (Spacer Sucker Camera Offset) vector is calibrated. This gives the displacement vector between the camera focal point and the center vacuum hole in the spacer sucker tool. Additionally, you should check that our site config file contains the correct values for each variable that the document lists out. Note that those values in the document are particular for Purdue, and that ours will be different, so do not just copy them over. The site config file containing the all the variables with site-specific values can be found at this path: `./gantry-config-bu/Config/TFPX/CROC1x2_Site_Config.txt`. If you need to measure any new values (e.g. the SSCO vector or the pin location of one of the chucks), you should put the new value in this file and save it. The format for the variable definitions can be seen in the below examples:
+
+```
+focus_1x2_hdi_launch: 77.382407
+small_ssco: {0.680517,105.374218,-5.563789}
+```
+
+Note that you CANNOT put a space before or after commas for vectors in gScript.
+
+
 ### Step 1: Stage parts
 
 Place the module carrier on which the glued module is screwed in onto the desired chuck. Make sure the screws are on the right side of the chuck. 
@@ -43,7 +51,7 @@ Place the module carrier on which the glued module is screwed in onto the desire
 |-|
 |![Step 2](./TFPX-102-materials/images/spacer_step2.jpg)|
 
-3. Lift the stencil off the spacer, being careful that the spacer is not lifted with the stencil. If it is, carefully place it back in the desired location. Then, place the other brass fixture over the spacer, ensuring the orientation is correct (holes should be oriented the same as the stencil).
+3. Lift the stencil off the spacer, being careful that the spacer is not lifted with the stencil. If does lift with the stencil, use tweezers to carefully place it back in the desired location. Then, place the other brass fixture over the spacer, ensuring the orientation is correct (holes should be oriented the same as the stencil).
 
 |Step 3|
 |-|
@@ -63,8 +71,6 @@ Place the module carrier on which the glued module is screwed in onto the desire
 
 ### Step 2: Run installation script
 
-**Caleb: What calibrations are needed to run the script? And how can they be checked? Reference Purdue SOP linked above which has calibration instructions.**
-
 You can now load the spacer installation script into the gScript Interpreter, which can be found at:
 
 `./gantry-config-bu/Scripts/TFPXModules/Pre-production Scripts/Spacer_1x2_sensor.gscript`
@@ -82,11 +88,23 @@ Once the gantry places the spacer and completes the script, save the generated l
 
 ### Step 3: Cure spacer
 
-Let the spacer cure for at least 8 hours. Place a note saying "DO NOT TOUCH, GLUE CURING" next to the module so no one unknowingly interferes with this process.
+Let the spacer cure for at least 3 hours before you attempt to wirebond. Place a note saying "DO NOT TOUCH, GLUE CURING" next to the module so no one unknowingly interferes with this process.
+
+### Step 4: Update Purdue DB
+
+Navigate to the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php)) and login. Here's what to do from there:
+
+1. Click the "Inspect part (read/write)" button
+2. Type in the serial number of the module you're assembling into the "Serial #" field (e.g. RH0136)
+3. Click the search button
+4. Click the "Edit" button on the left side of the module's entry
+5. Click the dropdown next to the "New property:" field and select the "Spacer installed" option
+6. Enter the day the spacer was installed in the date field to the right of the drop down
+7. Click the "Update" button below 
 
 ### Next steps
 
-After the glue is cured, you can now screw the module into the assembly carrier it's on using two M2.5 screws in the two locations circled in red below.
+After the glue is cured, you can now screw the module into the assembly carrier it's on using two M2.5 screws in the two locations circled in red below. Do not tighten the screws! Only turn them until the heads start to make contact with the HDI. The module must remain flat on the carrier and over-tightening the screws will cause the module to tilt.
 
 |Assembly Carrier Screws|
 |-|

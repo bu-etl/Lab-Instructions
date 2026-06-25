@@ -1,6 +1,6 @@
 # TFPX-101 Module Gluing
 
-`Introduction Placeholder`
+This SOP details how to glue a pre-production HDI to a CROCv2 SRA, and how to update the Purdue database to reflect that the parts have been glued.
 
 ## Required Materials
 
@@ -31,9 +31,30 @@
 
 ## Procedure
 
+### Step 0: Gather parts
+
+You should first gather the parts for the module you want to assemble. You should start by deciding which module serial number you should assemble. Once you do, navigate to the Purdue DB and log in ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php?)). Follow these steps:
+
+1. Click "Inspect part (read/write)"
+2. Enter "Boston" in for the "Location" field
+3. Click "Search"
+4. Find the module serial number (e.g. RH0142) you'd like to assemble and click its "Edit" button
+5. Look at the HDI and SRA serial numbers in the "Subcomponents" field
+6. Retrieve the corresponding HDI and SRA/gelpak
+- The gelpak labels and HDI bags should already be labeled with their module serial numbers as part of the component reception procedure
+7. Use the correct SRA in the gelpak
+
+Many times, there are multiple SRAs in a gelpak, and they are not always laid out in the same way that the gelpak label suggests. What you should do to verify you will use the correct SRA is first click the "Edit" button next to the SRA entry in the "Subcomponents" field. Then look at the individual ROC serial numbers:
+
+|ROC labels|
+|-|
+|![ROClabel](./TFPX-101-materials/images/ROClabels.png)|
+
+Particularly, you will want to look at the two characters at the end of the serial number, as this is what gets laser engraved on the ROCs. See the images in step 1 for what this engraving looks like. For the example entry above, I would look for the SRA that has the engraving "3_4" and "4_4" on its ROCs. Additionally, you should ensure that the ROCs are in the correct orientation (i.e. the ROC with laser engraving "3_4" is actually in site U1A as the Purdue DB suggests). If it is wrong, you should notify the maintainer for the database entries so they can fix the error.
+
 ### Step 1: Inspect parts
 
-Upon receiving new components, conduct a detailed inspection of the SRAs to spot for any damage done prior to our handling of the components/module. Any damage done after this point will ideally be easier to pinpoint to a specific mishandling or part of our procedure that can be learned from and avoided in the future. A sufficient inspection entails pictures of both sides of the SRA that would capture any chips or scratches. Any noticeable damage to the HDI should also be documented. 
+Conduct a detailed inspection of the SRAs to spot for any damage done prior to our handling of the components/module. Any damage done after this point will ideally be easier to pinpoint to a specific mishandling or part of our procedure that can be learned from and avoided in the future. A sufficient inspection entails pictures of both sides of the SRA that would capture any chips or scratches. Any noticeable damage to the HDI should also be documented. 
 
 The picture of the SRA can be done with either a microscope or the gantry camera. Here is an example of a set that captures the entire SRA using the microscope.
 
@@ -76,7 +97,7 @@ To know how much glue was used to adhere the module together, weigh the componen
 16. Open the sliding glass door
 17. Pick up SRA with vacuum pen
 18. Carry SRA over to the gantry 1x2 assembly tooling using vacuum pen, having your gloved hand hovering under the SRA in case the suction fails
-19. Gently place the SRA on the ROC launch chuck (sensor side up, wirebond pads on the right)
+19. Gently place the SRA on the ROC launch chuck (sensor side up, wirebond pads on the left)
 20. Using the vacuum pen, gently push the SRA into the corner of the two strips of kapton tape
 21. Turn off the gelpak tooling vacuum line (gScript command: `setvac gelpak_release 0`)
 22. Remove HDI from its bag using vacuum pen
@@ -91,7 +112,7 @@ To know how much glue was used to adhere the module together, weigh the componen
 31. Gently place the HDI on the HDI launch chuck (component side up, two screw holes on right)
 32. If the HDI is noticeably warped, gently bend it so it lays flat on the chuck
 33. Align the two screw holes in the HDI with the two screw holes in the chuck
-34. Add the masses of the HDI and SRA together
+34. Add the masses of the HDI and SRA together, and record this value
 
 Below is an image of what the components should look like after they are staged:
 
@@ -157,9 +178,12 @@ After the assembly script, you must let the glue cure for at least 8 hours. Make
 |-|
 |![Curing](./TFPX-101-materials/images/curing.jpg)|
 
-You should also take this time to clean the materials that have glue on them. You can take off the mixing nozzle and dispose of it. Make sure to wipe the end of the glue gun before putting the cap back on. For the dirty stencil and spreader, try to wipe off as much glue as you can using a paper towel. You can then clean the rest of the glue off using acetone and another paper towel.
 
-### Step 5: Run survey script
+### Step 5: Clean materials
+
+While the module is curing, you should take this time to clean the materials that have glue on them. You can take off the mixing nozzle and dispose of it. Make sure to wipe the end of the glue gun before putting the cap back on. For the dirty stencil and spreader, try to wipe off as much glue as you can using a paper towel. You can then clean the rest of the glue off using acetone and another paper towel.
+
+### Step 6: Run survey script
 
 After enough time has passed, load the survey script, which will measure the relative alignment of the two parts. That script is currently in the following location:
 
@@ -167,29 +191,34 @@ After enough time has passed, load the survey script, which will measure the rel
 
 Run the script and follow the prompts that pop-up. Select the precise option for measuring the fiducials. After the script completes, save the survey log file, which is found in the logs directory (`./gantry-config-bu/Logs/`).
 
-### Step 6: Weigh module
+### Step 7: Weigh module
 
 You can now pick the module up with a vacuum pen and weigh the module with the high precision scale following a similar process as the earlier weighing. Record the mass and subtract off the sum of the earlier measurements of the individual components.
 
 $m_{\text{glue}}=m_{\text{glued module}}-(m_{\text{SRA}}+m_{\text{HDI}})$
 
-Record this value.
+Record this value. 
 
-### Step 7: Update the Purdue DB
+### Step 8: Update the Purdue DB
 
-Log into the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php)) and login. Here's what to do from there:
+Navigate to the Purdue database ([login page](https://www.physics.purdue.edu/cmsfpix/Phase2_Test/main.php)) and login. Here's what to do from there:
 
 1. Click the "Inspect part (read/write)" button
 2. Type in the serial number of the module you're assembling into the "Serial #" field (e.g. RH0136)
-3. Click the search button (pressing enter won't work)
+3. Click the search button
 4. Click the "Edit" button on the left side of the module's entry
 5. Click the "Status" dropdown and change it to "Glued"
 6. Click the "Update" button
 7. Scroll down to the "Add data" section
-8. Next to the "Add data" button, click "Browse..." and select the assembly log file
-9. Type "Assembly log file:" in the description field
-10. Click the "Add data" button
-11. Repeat steps 7-10, but with the survey log file (type "Survey log file:" in description field)
+8. Select the "Text" option
+9. Next to the "Add data" button, click "Browse..." and select the assembly log file
+10. Type "Assembly log file:" in the description field
+11. Click the "Add data" button
+12. Repeat steps 7-11, but with the survey log file (type "Survey log file:" in description field)
+13. Scroll to the "Add measurement" section
+14. Select "SHIMMY" in the drop down next to the button, enter in the average shimmy value obtained in the survey log file (units are um), and click "Add measurement"
+15. Repeat step 14 with "SLIDE" (units are also um)
+16. Repeat step 14 with "EPOXY_MASS" and enter the $m_{\text{glue}}$ you obtained (units are mg)
 
 ### Next steps
 
