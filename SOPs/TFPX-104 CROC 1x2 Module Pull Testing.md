@@ -78,7 +78,12 @@ For every wire:
 6. Inspect both bond sites and immediately classify:
     - The failure mode, such as `foot lift` or `heel break`
     - Which bond failed: bond `1` or bond `2` (the first or second bond made)
-7. If the broken wire remains on the hook or still obstructs the next wire, use fine-point tweezers to move it aside without contacting any intact wirebond.
+7. Record the result in the pull-test software by selecting the illustrated **Foot Lift** or **Heel Break** failure mode and then selecting **Bond 1** or **Bond 2**. Use the diagrams in the software as a reference when identifying the failure mode. The result will appear in the table on the left with its bond ID, break strength, failure mode, and broken bond.
+8. If the broken wire remains on the hook or still obstructs the next wire, use fine-point tweezers to move it aside without contacting any intact wirebond.
+
+|Pull-test software and break-type reference|
+|-|
+|![Pull-test software showing foot-lift and heel-break diagrams](./TFPX-104-materials/PullTestSoftwareScreenshot.PNG)|
 
 The image below shows the hook correctly placed beneath a dedicated HDI-to-HDI pull-test wire.
 
