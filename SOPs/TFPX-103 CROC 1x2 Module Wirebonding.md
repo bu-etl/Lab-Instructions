@@ -216,4 +216,4 @@ Navigate to the Purdue database ([login page](https://www.physics.purdue.edu/cms
 
 ### Next steps
 
-You can now put the module into it's module testing carrier, or put it into the dry air cabinet until you are ready to do so.
+You can now proceed with pull testing this module, or put it into the dry-air cabinet until you are ready to do so.
